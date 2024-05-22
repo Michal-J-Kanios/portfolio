@@ -16,16 +16,22 @@ html {
 
 a {
     text-decoration: none;
-    color: #1c1e53;
+    color: #EEEBE5;
     transition: color 0.3s ease;
 }
 
 a:hover {
-    color: #5e3bee !important;
+    color: #B59251 !important;
 }
 
-h5 {
+.main h5 {
     font-size: 20px;
+    color: #1B1D1B;
+}
+
+.skills h5 {
+    font-size: 20px;
+    color: #EEEBE5;
 }
 
 li {
@@ -33,7 +39,7 @@ li {
 }
 
 nav {
-    background-color: #fff;
+    background-color: #16130D;
     position: sticky;
     top: 0;
     padding: 0 85px;
@@ -68,10 +74,10 @@ nav ul, footer .top ul {
 
 .dropbtn {
     background-color: transparent;
-    color: #1c1e53;
+    color: #EEEBE5;
     padding: 15px;
     font-size: 15px;
-    border: 1px solid #1c1e53;
+    border: 1px solid #EEEBE5;
 }
 
 .dropbtn i {
@@ -86,7 +92,7 @@ nav ul, footer .top ul {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #fff;
+    background-color: #EEEBE5;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
@@ -94,35 +100,35 @@ nav ul, footer .top ul {
   
 
 .dropdown-content a {
-    color: #1c1e53;
+    color: #16130D;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
 }
   
-.dropdown-content a:hover {background-color: #deebee;}
+.dropdown-content a:hover {background-color: #D3C5AB;}
   
 .dropdown:hover .dropdown-content {display: block;}
   
 .dropdown:hover .dropbtn {
-    background-color: #5e3bee;
+    background-color: #B59251;
     transition: all 0.3s ease;
 }
 
 nav button {
-    color: #1c1e53;
+    color: #EEEBE5;
     background-color: transparent;
     padding: 12px 16px;
     border-radius: 5px;
-    border: 1px solid #1c1e53;
+    border: 1px solid #EEEBE5;
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
 nav button:hover {
-    background-color: #5e3bee;
-    border-color: #5e3bee;
-    color: #fff;
+    background-color: #B59251;
+    border-color: #B59251;
+    color: #eeebe5;
 }
 
 nav button#menuButton {
@@ -138,7 +144,7 @@ nav button#menuButton {
     --h: 5; /* tutaj wysokosc boxa */
     --m: 0rem 0; /* tutaj david margines */
     --w: 16; /* tutaj szerokosc boxa */
-    --thumb-bgc: #fff;
+    --thumb-bgc: transparent;
     --thumb-w: 1rem;
   
     margin: var(--m);
@@ -216,7 +222,7 @@ nav button#menuButton {
   }
 
 .main {
-    background-color: #deebee;
+    background-color: #EEEBE5;
     padding: 90px 85px;
     display: flex;
     align-items: center;
@@ -237,34 +243,46 @@ nav button#menuButton {
 }
 
 .main .left h3 span {
-    color: #5e3bee;
+    color: #755F37;
 }
 
 .main .left p {
-    color: #1c1e53;
+    color: #16130D;
     font-size: 22px;
     margin-top: 20px;
 }
 
 .main .left button {
     margin-top: 40px;
-    color: #fff;
+    color: #eeebe5;
     cursor: pointer;
-    background-color: #5e3bee;
+    background-color: #B59251;
     padding: 14px 24px;
     border: 1px solid transparent;
     border-radius: 5px;
 }
 
+.main .left button:hover {
+    background-color: #16130D;
+    transition: all 0.3s ease;
+    scale: 110%;
+}
+
 .main .right img {
     width: 500px;
+    background-color: #D3C5AB;
 }
 
 .skills {
-    padding: 110px 85px 0;
+    padding: 110px 85px 40px;
+    background-color: #16130D;
 }
 
-.skills h3,
+.skills h3 {
+    font-size: 40px;
+    margin-top: 20px;
+    color: #EEEBE5;
+}
 .about .right h3,
 .portfolio .header h3
 {
@@ -279,7 +297,7 @@ nav button#menuButton {
 }
 
 .skills .skill-items .item {
-    background-color: #deebee;
+    background-color: #D3C5AB;
     width: 25%;
     border-radius: 10px;
     padding: 32px;
@@ -289,14 +307,15 @@ nav button#menuButton {
 }
 
 .skills .skill-items .item:hover {
-    border-color: #5e3bee;
+    border-color: #755F37;
+    scale: 110%;
 }
 
 .skills .skill-items .item .icon {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #fff;
+    background-color: #eeebe5;
     width: 46px;
     height: 46px;
     border-radius: 10px;
@@ -306,7 +325,7 @@ nav button#menuButton {
 
 .skills .skill-items .item .icon i {
     font-size: 26px;
-    color: #006b6a;
+    color: #B59251;
 }
 
 .skills .skill-items .item h4,
@@ -317,8 +336,9 @@ nav button#menuButton {
 .skills .skill-items .item p {
     margin-top: 20px;
     font-size: 14px;
+    font-weight: 600;
     line-height: 22px;
-    color: #1c1e53;
+    color: #16130D;
 }
 
 .about {
@@ -326,10 +346,11 @@ nav button#menuButton {
     display: flex;
     align-items: center;
     gap: 60px;
+    background-color: #D3C5AB;
 }
 
 .about .left {
-    background-color: #deebee;
+    background-color: #EEEBE5;
     border-radius: 10px 10px 0 0;
 }
 
@@ -343,7 +364,7 @@ nav button#menuButton {
 }
 
 .portfolio {
-    background-color: #deebee;
+    background-color: #EEEBE5;
     padding: 110px 85px;
 }
 
@@ -355,9 +376,9 @@ nav button#menuButton {
 }
 
 .portfolio .header button {
-    background-color: #5e3bee;
+    background-color: #B59251;
     padding: 15px 25px;
-    color: #fff;
+    color: #eeebe5;
     display: flex;
     align-items: center;
     cursor: pointer;
@@ -367,7 +388,8 @@ nav button#menuButton {
 }
 
 .portfolio .header button:hover {
-    background-color: #1c1e53;
+    background-color: #16130D;
+    scale: 110%;
     transition: all 0.3s ease;
 }
 
@@ -383,7 +405,7 @@ nav button#menuButton {
 
 .portfolio .portfo-items .item {
     width: 30%;
-    background-color: #fff;
+    background-color: #D3C5AB;
     border-radius: 10px;
     border-bottom: 4px solid transparent;
     cursor: pointer;
@@ -392,7 +414,8 @@ nav button#menuButton {
 }
 
 .portfolio .portfo-items .item:hover {
-    border-color: #5e3bee;
+    border-color: #B59251;
+    scale: 110%;
 }
 
 .portfolio .portfo-items .item img {
@@ -417,7 +440,8 @@ nav button#menuButton {
 .portfolio .portfo-items .item .info a {
     text-decoration: underline;
     text-underline-offset: 10px;
-    text-decoration-color: #5e3bee;
+    color: #16130D;
+    text-decoration-color: #B59251;
 }
 
 .portfolio .portfo-items .item .info a i {
@@ -426,7 +450,7 @@ nav button#menuButton {
 }
 
 footer {
-    background-color: #fff;
+    background-color: #16130D;
     padding: 85px;
     display: flex;
     flex-direction: column;
