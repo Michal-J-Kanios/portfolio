@@ -42,6 +42,7 @@ nav {
     justify-content: space-between;
     height: 80px;
     box-shadow: 0 5px 80px rgba(0, 0, 0, 0.1);
+    z-index: 100;
 }
 
 nav .logo, footer .logo {
@@ -132,6 +133,87 @@ nav button#menuButton {
     padding: 7px;
     display: none;
 }
+
+.c-compare { /* Tutaj stylujemy kolor paska oraz skalujemy diva */
+    --h: 5; /* tutaj wysokosc boxa */
+    --m: 0rem 0; /* tutaj david margines */
+    --w: 16; /* tutaj szerokosc boxa */
+    --thumb-bgc: #fff;
+    --thumb-w: 1rem;
+  
+    margin: var(--m);
+    position: relative;
+  }
+  .c-compare::after {
+    content: "";
+    display: block;
+    padding-bottom: calc((var(--h) / var(--w)) * 100%);
+  }
+  .c-compare__left,
+  .c-compare__right {
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    width: 100%;
+  }
+  .c-compare__left {
+    clip-path: polygon(0% 0%, var(--value) 0%, var(--value) 100%, 0% 100%);
+  }
+  .c-compare__right {
+    clip-path: polygon(100% 0%, var(--value) 0%, var(--value) 100%, 100% 100%);
+  }
+  .c-compare__range {
+    background-color: transparent;
+    box-sizing: border-box;
+    font-family: inherit;
+    height: 100%;
+    margin: 0%;
+    outline: none;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+  .c-compare__range::-moz-range-thumb {
+    background-color: var(--thumb-bgc);
+    cursor: ew-resize;
+    height: 100%;  
+    width: var(--thumb-w);
+  }
+  .c-compare__range::-webkit-slider-thumb {
+    background-color: var(--thumb-bgc);
+    cursor: ew-resize;
+    height: 100%;  
+    width: var(--thumb-w);
+  }
+
+  /* UZYWAJAC TEGO SLIDER BEDZIE ROBIL EFEKT POP-UP PO PRZYTRZYMANIU, LATWIEJ SYGNALIZUJAC DZIALANIE
+  .c-compare__range:focus::-webkit-slider-thumb {
+    background-color: var(--thumb-bgc-focus);
+    box-shadow: 0 0 0 3px var(--thumb-bgc);
+  }
+  .c-compare__range:focus::-moz-range-thumb {
+    background-color: var(--thumb-bgc-focus);
+    box-shadow: 0 0 0 3px var(--thumb-bgc);
+  }
+  */
+
+  .c-compare__range::-moz-range-track {
+    background: transparent;
+    background-size: 100%;
+    box-sizing: border-box;
+  }
+  .c-compare__range::-webkit-slider-runnable-track {
+    background: transparent;
+    background-size: 100%;
+    box-sizing: border-box;
+    height: 100%;
+  }
+  .c-compare__range,
+  .c-compare__range::-webkit-slider-runnable-track,
+  .c-compare__range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+  }
 
 .main {
     background-color: #deebee;
