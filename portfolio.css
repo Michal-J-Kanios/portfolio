@@ -144,249 +144,32 @@ nav button#menuButton {
     display: none;
 }
 
-.c-compare { /* Tutaj stylujemy kolor paska oraz skalujemy diva */
-    --h: 5; /* tutaj wysokosc boxa */
-    --m: 0rem 0; /* tutaj david margines */
-    --w: 16; /* tutaj szerokosc boxa */
-    --thumb-bgc: transparent;
-    --thumb-w: 1rem;
-  
-    margin: var(--m);
-    position: relative;
-  }
-  .c-compare::after {
-    content: "";
-    display: block;
-    padding-bottom: calc((var(--h) / var(--w)) * 100%);
-  }
-  .c-compare__left,
-  .c-compare__right {
-    height: 100%;
-    object-fit: cover;
-    position: absolute;
-    width: 100%;
-  }
-  .c-compare__left {
-    clip-path: polygon(0% 0%, var(--value) 0%, var(--value) 100%, 0% 100%);
-  }
-  .c-compare__right {
-    clip-path: polygon(100% 0%, var(--value) 0%, var(--value) 100%, 100% 100%);
-  }
-  .c-compare__range {
-    background-color: transparent;
-    box-sizing: border-box;
-    font-family: inherit;
-    height: 100%;
-    margin: 0%;
-    outline: none;
-    position: absolute;
-    top: 0;
-    width: 100%;
-  }
-  .c-compare__range::-moz-range-thumb {
-    background-color: var(--thumb-bgc);
-    cursor: ew-resize;
-    height: 100%;  
-    width: var(--thumb-w);
-  }
-  .c-compare__range::-webkit-slider-thumb {
-    background-color: var(--thumb-bgc);
-    cursor: ew-resize;
-    height: 100%;  
-    width: var(--thumb-w);
-  }
 
-  /* UZYWAJAC TEGO SLIDER BEDZIE ROBIL EFEKT POP-UP PO PRZYTRZYMANIU, LATWIEJ SYGNALIZUJAC DZIALANIE
-  .c-compare__range:focus::-webkit-slider-thumb {
-    background-color: var(--thumb-bgc-focus);
-    box-shadow: 0 0 0 3px var(--thumb-bgc);
-  }
-  .c-compare__range:focus::-moz-range-thumb {
-    background-color: var(--thumb-bgc-focus);
-    box-shadow: 0 0 0 3px var(--thumb-bgc);
-  }
-  */
-
-  .c-compare__range::-moz-range-track {
-    background: transparent;
-    background-size: 100%;
-    box-sizing: border-box;
-  }
-  .c-compare__range::-webkit-slider-runnable-track {
-    background: transparent;
-    background-size: 100%;
-    box-sizing: border-box;
-    height: 100%;
-  }
-  .c-compare__range,
-  .c-compare__range::-webkit-slider-runnable-track,
-  .c-compare__range::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-  }
-
-.main {
-    background-color: #EEEBE5;
-    padding: 90px 85px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 40px;
-}
-
-.main .left {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-}
-
-.main .left h3 {
-    margin-top: 10px;
-    font-weight: bold;
-    font-size: 46px;
-}
-
-.main .left h3 span {
-    color: #755F37;
-}
-
-.main .left p {
-    color: #16130D;
-    font-size: 22px;
-    margin-top: 20px;
-}
-
-.main .left button {
-    margin-top: 40px;
-    color: #eeebe5;
-    cursor: pointer;
-    background-color: #B59251;
-    padding: 14px 24px;
-    border: 1px solid transparent;
-    border-radius: 5px;
-}
-
-.main .left button:hover {
-    background-color: #16130D;
-    transition: all 0.3s ease;
-    scale: 110%;
-}
-
-.main .right img {
-    width: 500px;
-    background-color: #D3C5AB;
-}
-
-.skills {
-    padding: 110px 85px 40px;
-    background-color: #16130D;
-}
-
-.skills h3 {
-    font-size: 40px;
-    margin-top: 20px;
-    color: #EEEBE5;
-}
-.about .right h3,
 .portfolio .header h3
 {
     font-size: 40px;
     margin-top: 20px;
 }
 
-.skills .skill-items {
-    display: flex;
-    margin-top: 70px;
-    gap: 30px;
-}
-
-.skills .skill-items .item {
-    background-color: #D3C5AB;
-    width: 25%;
-    border-radius: 10px;
-    padding: 32px;
-    border-bottom: 4px solid transparent;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.skills .skill-items .item:hover {
-    border-color: #755F37;
-    scale: 110%;
-}
-
-.skills .skill-items .item .icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #eeebe5;
-    width: 46px;
-    height: 46px;
-    border-radius: 10px;
-    margin-bottom: 22px;
-    box-shadow: 0 0 16px rgba(0, 0, 0, 0.1);
-}
-
-.skills .skill-items .item .icon i {
-    font-size: 26px;
-    color: #B59251;
-}
-
-.skills .skill-items .item h4,
-.portfolio .portfo-items .item .info h4{
-    font-size: 18px;
-}
-
-.skills .skill-items .item p {
-    margin-top: 20px;
-    font-size: 14px;
-    font-weight: 600;
-    line-height: 22px;
-    color: #16130D;
-}
-
-.about {
-    padding: 110px;
-    display: flex;
-    align-items: center;
-    gap: 60px;
-    background-color: #EEEBE5;
-}
-
-.about .left {
-    background-color: #D3C5AB;
-    border-radius: 10px 10px 0 0;
-}
-
-.about .left img {
-    width: 440px;
-}
-
-.about .right p {
-    font-size: 16px;
-    margin-top: 30px;
-}
 
 .portfolio {
-    background-color: #16130D;
+    background-color: #EEEBE5;
     padding: 110px 85px;
-}
-
-.portfolio h3 {
-    color: #EEEBE5;
 }
 
 .portfolio .header {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 60px;
 }
 
 .portfolio .header button {
-    background-color: #D3C5AB;
+    margin-top: 50px;
+    background-color: #16130D;
     padding: 15px 25px;
-    color: #16130D;
+    color: #EEEBE5;
     display: flex;
     align-items: center;
     cursor: pointer;
@@ -395,15 +178,19 @@ nav button#menuButton {
     border-radius: 10px;
 }
 
-.portfolio .header a {
-    text-decoration: none;;
-}
-
 .portfolio .header button:hover {
     background-color: #B59251;
     color: #eeebe5;
     scale: 105%;
     transition: all 0.3s ease;
+}
+
+.portfolio .header a {
+    text-decoration: none;
+}
+
+.portfolio .header a:hover {
+    color: #EEEBE5 !important;
 }
 
 .portfolio .header button i {
@@ -414,6 +201,7 @@ nav button#menuButton {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin: 50px;
 }
 
 .portfolio .portfo-items .item {
