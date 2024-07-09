@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Michał Kanios</title>
+    <link rel="stylesheet" href="portfolio.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+    <link rel="manifest" href="icons/site.webmanifest">
+</head>
+<body>
+    
+    <nav>
+        <div class="logo">
+            <img src="mkanios-logo-white.png">
+            <a href="https://github.com/Michal-J-Kanios"
+            target="_blank">Michał Kanios</a>
+        </div>
+        <ul>
+            <li><a href="https://michalkanios.com">Home</a></li>
+            <li><a href="#blog">My Blog</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="#artGallery">Art Gallery</a></li>
+            <li><a href="#contact">Contact Me</a></li>
+        </ul>
+        
+        <div class="dropdown">
+            <button class="dropbtn"><i class='bx bx-world'></i>Language</button>
+            <div class="dropdown-content">
+              <a href="#">English</a>
+              <a href="#">Polski</a>
+            </div>
+          </div>
+
+        <button id="menuButton" onclick="openMenu()">
+            <i class='bx bx-menu'></i>
+        </button>
+    </nav>
+
+    <div class="portfolio">
+        <div class="header">
+            <div class="info">
+                <h3>Art Gallery</h3>
+            </div>
+        </div>
+
+        <style>
+            div.gallery {
+              border: 2px solid whitesmoke;
+            }
+            
+            div.gallery:hover {
+              border: 2px solid #B59251;
+              scale: 105%;
+              transition: all 0.3s ease;
+            }
+            
+            div.gallery img {
+              width: 100%;
+              height: auto;
+            }
+            
+            div.desc {
+              padding: 15px;
+              text-align: center;
+              background-color: #D3C5AB;
+            }
+            
+            * {
+              box-sizing: border-box;
+            }
+            
+            .responsive {
+              padding: 0 6px;
+              float: left;
+              width: 24.99999%;
+            }
+            
+            @media only screen and (max-width: 700px) {
+              .responsive {
+                width: 49.99999%;
+                margin: 6px 0;
+              }
+            }
+            
+            @media only screen and (max-width: 500px) {
+              .responsive {
+                width: 100%;
+              }
+            }
+            
+            .clearfix:after {
+              content: "";
+              display: table;
+              clear: both;
+            }
+        </style>
+
+    <div class="responsive">
+        <div class="gallery">
+            <a target="_blank" href="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/37bd4255-cf63-438b-8325-e1ce209e7562/dgmbmkp-6635abd6-0f4c-4fcd-8ddb-2ecef978adf1.png/v1/fit/w_828,h_622,q_70,strp/the_vampire__hood___christmas_party_by_nova7770_dgmbmkp-414w-2x.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9OTYwIiwicGF0aCI6IlwvZlwvMzdiZDQyNTUtY2Y2My00MzhiLTgzMjUtZTFjZTIwOWU3NTYyXC9kZ21ibWtwLTY2MzVhYmQ2LTBmNGMtNGZjZC04ZGRiLTJlY2VmOTc4YWRmMS5wbmciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.pTNViMnQhG5NPoQ1eXt5wLgHbBxo9ffm6RjUadGxU5E">
+            <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/37bd4255-cf63-438b-8325-e1ce209e7562/dgmbmkp-6635abd6-0f4c-4fcd-8ddb-2ecef978adf1.png/v1/fit/w_828,h_622,q_70,strp/the_vampire__hood___christmas_party_by_nova7770_dgmbmkp-414w-2x.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9OTYwIiwicGF0aCI6IlwvZlwvMzdiZDQyNTUtY2Y2My00MzhiLTgzMjUtZTFjZTIwOWU3NTYyXC9kZ21ibWtwLTY2MzVhYmQ2LTBmNGMtNGZjZC04ZGRiLTJlY2VmOTc4YWRmMS5wbmciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.pTNViMnQhG5NPoQ1eXt5wLgHbBxo9ffm6RjUadGxU5E" alt="Christmas Evening" width="600" height="400">
+            </a>
+            <div class="desc">The Vampire 'Hood - an art project where folklore invades everyday life</div>
+        </div>
+        </div>
+
+
+        <div class="responsive">
+        <div class="gallery">
+            <a target="_blank" href="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/37bd4255-cf63-438b-8325-e1ce209e7562/dghmqqe-58b5454c-d99b-49be-963a-8f0168d27f70.png/v1/fit/w_828,h_622,q_70,strp/the_vampire__hood___erin_von_brandt_by_nova7770_dghmqqe-414w-2x.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9OTYwIiwicGF0aCI6IlwvZlwvMzdiZDQyNTUtY2Y2My00MzhiLTgzMjUtZTFjZTIwOWU3NTYyXC9kZ2htcXFlLTU4YjU0NTRjLWQ5OWItNDliZS05NjNhLThmMDE2OGQyN2Y3MC5wbmciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.MwfcYzQ1zW3I4JYwnt3Axe1SGEPQrePNWoFTMcAH2D8">
+            <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/37bd4255-cf63-438b-8325-e1ce209e7562/dghmqqe-58b5454c-d99b-49be-963a-8f0168d27f70.png/v1/fit/w_828,h_622,q_70,strp/the_vampire__hood___erin_von_brandt_by_nova7770_dghmqqe-414w-2x.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9OTYwIiwicGF0aCI6IlwvZlwvMzdiZDQyNTUtY2Y2My00MzhiLTgzMjUtZTFjZTIwOWU3NTYyXC9kZ2htcXFlLTU4YjU0NTRjLWQ5OWItNDliZS05NjNhLThmMDE2OGQyN2Y3MC5wbmciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.MwfcYzQ1zW3I4JYwnt3Axe1SGEPQrePNWoFTMcAH2D8" alt="Vampire Hunter" width="600" height="400">
+            </a>
+            <div class="desc">The Vampire 'Hood - Erin von Brandt concept art</div>
+        </div>
+        </div>
+
+    <div class="responsive">
+      <div class="gallery">
+        <a target="_blank" href="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/37bd4255-cf63-438b-8325-e1ce209e7562/dgor4vd-19f7d19e-263c-4b8d-8f66-dedc27359e13.png/v1/fit/w_828,h_622,q_70,strp/the_vampire__hood___nakata_saito_by_nova7770_dgor4vd-414w-2x.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9OTYwIiwicGF0aCI6IlwvZlwvMzdiZDQyNTUtY2Y2My00MzhiLTgzMjUtZTFjZTIwOWU3NTYyXC9kZ29yNHZkLTE5ZjdkMTllLTI2M2MtNGI4ZC04ZjY2LWRlZGMyNzM1OWUxMy5wbmciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.juCxxoDpoyrhzj1rUOMnaT9wX6_phqL7tOvmDm2cPmg">
+          <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/37bd4255-cf63-438b-8325-e1ce209e7562/dgor4vd-19f7d19e-263c-4b8d-8f66-dedc27359e13.png/v1/fit/w_828,h_622,q_70,strp/the_vampire__hood___nakata_saito_by_nova7770_dgor4vd-414w-2x.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9OTYwIiwicGF0aCI6IlwvZlwvMzdiZDQyNTUtY2Y2My00MzhiLTgzMjUtZTFjZTIwOWU3NTYyXC9kZ29yNHZkLTE5ZjdkMTllLTI2M2MtNGI4ZC04ZjY2LWRlZGMyNzM1OWUxMy5wbmciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.juCxxoDpoyrhzj1rUOMnaT9wX6_phqL7tOvmDm2cPmg" alt="Dojo Sensei" width="600" height="400">
+        </a>
+        <div class="desc">The Vampire 'Hood - Nakata Saito concept art</div>
+      </div>
+      </div>
+
+    <div class="responsive">
+      <div class="gallery">
+        <a target="_blank" href="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/37bd4255-cf63-438b-8325-e1ce209e7562/dhe7jjb-4c1c4ae1-8555-41aa-947d-e4da054d160c.png/v1/fit/w_828,h_622,q_70,strp/the_vampire__hood___duchess_jeanette_lenoir_by_nova7770_dhe7jjb-414w-2x.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MzAwMCIsInBhdGgiOiJcL2ZcLzM3YmQ0MjU1LWNmNjMtNDM4Yi04MzI1LWUxY2UyMDllNzU2MlwvZGhlN2pqYi00YzFjNGFlMS04NTU1LTQxYWEtOTQ3ZC1lNGRhMDU0ZDE2MGMucG5nIiwid2lkdGgiOiI8PTQwMDAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.tcklvWAyqlmAM5t6coTVL-qh0wiLpXWGnI-tAUO5kbU">
+          <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/37bd4255-cf63-438b-8325-e1ce209e7562/dhe7jjb-4c1c4ae1-8555-41aa-947d-e4da054d160c.png/v1/fit/w_828,h_622,q_70,strp/the_vampire__hood___duchess_jeanette_lenoir_by_nova7770_dhe7jjb-414w-2x.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MzAwMCIsInBhdGgiOiJcL2ZcLzM3YmQ0MjU1LWNmNjMtNDM4Yi04MzI1LWUxY2UyMDllNzU2MlwvZGhlN2pqYi00YzFjNGFlMS04NTU1LTQxYWEtOTQ3ZC1lNGRhMDU0ZDE2MGMucG5nIiwid2lkdGgiOiI8PTQwMDAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.tcklvWAyqlmAM5t6coTVL-qh0wiLpXWGnI-tAUO5kbU" alt="French Vampire" width="600" height="400">
+        </a>
+        <div class="desc">The Vampire 'Hood - Duchess Jeanette concept art</div>
+      </div>
+    </div>
+
+    <div class="responsive">
+      <div class="gallery">
+        <a target="_blank" href="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/37bd4255-cf63-438b-8325-e1ce209e7562/dh4oiwz-86418807-58c9-4022-b5a2-f8f73d4722e7.png/v1/fit/w_828,h_622,q_70,strp/soloastria___hulrik_gufrisson_concept_art_by_nova7770_dh4oiwz-414w-2x.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MzAwMCIsInBhdGgiOiJcL2ZcLzM3YmQ0MjU1LWNmNjMtNDM4Yi04MzI1LWUxY2UyMDllNzU2MlwvZGg0b2l3ei04NjQxODgwNy01OGM5LTQwMjItYjVhMi1mOGY3M2Q0NzIyZTcucG5nIiwid2lkdGgiOiI8PTQwMDAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.I2npVWFCllAyCu6j4QWOJw_1J3vfnnvcdnNrw5lC6P4">
+          <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/37bd4255-cf63-438b-8325-e1ce209e7562/dh4oiwz-86418807-58c9-4022-b5a2-f8f73d4722e7.png/v1/fit/w_828,h_622,q_70,strp/soloastria___hulrik_gufrisson_concept_art_by_nova7770_dh4oiwz-414w-2x.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MzAwMCIsInBhdGgiOiJcL2ZcLzM3YmQ0MjU1LWNmNjMtNDM4Yi04MzI1LWUxY2UyMDllNzU2MlwvZGg0b2l3ei04NjQxODgwNy01OGM5LTQwMjItYjVhMi1mOGY3M2Q0NzIyZTcucG5nIiwid2lkdGgiOiI8PTQwMDAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.I2npVWFCllAyCu6j4QWOJw_1J3vfnnvcdnNrw5lC6P4" alt="Dwarf Fighter" width="600" height="400">
+        </a>
+        <div class="desc">Soloastria D&D - Hulrik Gufrisson concept art</div>
+      </div>
+    </div>
+
+    <div class="responsive">
+      <div class="gallery">
+        <a target="_blank" href="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/37bd4255-cf63-438b-8325-e1ce209e7562/dhfjtu2-ba328aac-4406-4080-9eb7-3200ea39cb6d.png/v1/fit/w_828,h_622,q_70,strp/soloastria___aureus_erz_saffron_concept_art_by_nova7770_dhfjtu2-414w-2x.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MzAwMCIsInBhdGgiOiJcL2ZcLzM3YmQ0MjU1LWNmNjMtNDM4Yi04MzI1LWUxY2UyMDllNzU2MlwvZGhmanR1Mi1iYTMyOGFhYy00NDA2LTQwODAtOWViNy0zMjAwZWEzOWNiNmQucG5nIiwid2lkdGgiOiI8PTQwMDAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.Gaqd9w1ZiB6QZbfuhy3FQvsb2aLZy-ldjIyp50BI_vQ">
+          <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/37bd4255-cf63-438b-8325-e1ce209e7562/dhfjtu2-ba328aac-4406-4080-9eb7-3200ea39cb6d.png/v1/fit/w_828,h_622,q_70,strp/soloastria___aureus_erz_saffron_concept_art_by_nova7770_dhfjtu2-414w-2x.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MzAwMCIsInBhdGgiOiJcL2ZcLzM3YmQ0MjU1LWNmNjMtNDM4Yi04MzI1LWUxY2UyMDllNzU2MlwvZGhmanR1Mi1iYTMyOGFhYy00NDA2LTQwODAtOWViNy0zMjAwZWEzOWNiNmQucG5nIiwid2lkdGgiOiI8PTQwMDAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.Gaqd9w1ZiB6QZbfuhy3FQvsb2aLZy-ldjIyp50BI_vQ" alt="Dragonborn Wizard" width="600" height="400">
+        </a>
+        <div class="desc">Soloastria D&D - Aureus Erz-Saffron concept art</div>
+      </div>
+    </div>
+
+    <div class="responsive">
+      <div class="gallery">
+        <a target="_blank" href="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/37bd4255-cf63-438b-8325-e1ce209e7562/dhmla9h-8b464de7-c778-4be1-914f-275dd8c02a8d.png/v1/fit/w_828,h_622,q_70,strp/soloastria___enix_the_squire_concept_art_by_nova7770_dhmla9h-414w-2x.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MzAwMCIsInBhdGgiOiJcL2ZcLzM3YmQ0MjU1LWNmNjMtNDM4Yi04MzI1LWUxY2UyMDllNzU2MlwvZGhtbGE5aC04YjQ2NGRlNy1jNzc4LTRiZTEtOTE0Zi0yNzVkZDhjMDJhOGQucG5nIiwid2lkdGgiOiI8PTQwMDAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.JahFpdrNLSMBB7Ok4cclS_sru1qv8PnZBWP3dD__3vw">
+          <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/37bd4255-cf63-438b-8325-e1ce209e7562/dhmla9h-8b464de7-c778-4be1-914f-275dd8c02a8d.png/v1/fit/w_828,h_622,q_70,strp/soloastria___enix_the_squire_concept_art_by_nova7770_dhmla9h-414w-2x.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MzAwMCIsInBhdGgiOiJcL2ZcLzM3YmQ0MjU1LWNmNjMtNDM4Yi04MzI1LWUxY2UyMDllNzU2MlwvZGhtbGE5aC04YjQ2NGRlNy1jNzc4LTRiZTEtOTE0Zi0yNzVkZDhjMDJhOGQucG5nIiwid2lkdGgiOiI8PTQwMDAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.JahFpdrNLSMBB7Ok4cclS_sru1qv8PnZBWP3dD__3vw" alt="Tiefling Paladin" width="600" height="400">
+        </a>
+        <div class="desc">Soloastria D&D - Enix the Squire concept art</div>
+      </div>
+    </div>
+
+    <div class="responsive">
+      <div class="gallery">
+        <a target="_blank" href="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/37bd4255-cf63-438b-8325-e1ce209e7562/dhh0f9c-7a491d94-3b16-48f1-8781-5b53685f85df.png/v1/fit/w_828,h_622,q_70,strp/soloastria___ornella_fievarne_concept_art_by_nova7770_dhh0f9c-414w-2x.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MzAwMCIsInBhdGgiOiJcL2ZcLzM3YmQ0MjU1LWNmNjMtNDM4Yi04MzI1LWUxY2UyMDllNzU2MlwvZGhoMGY5Yy03YTQ5MWQ5NC0zYjE2LTQ4ZjEtODc4MS01YjUzNjg1Zjg1ZGYucG5nIiwid2lkdGgiOiI8PTQwMDAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.6ecHtpO1c9k2wDwRl9UXMIKThX0iKVXrue6Ke8P3d_A">
+          <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/37bd4255-cf63-438b-8325-e1ce209e7562/dhh0f9c-7a491d94-3b16-48f1-8781-5b53685f85df.png/v1/fit/w_828,h_622,q_70,strp/soloastria___ornella_fievarne_concept_art_by_nova7770_dhh0f9c-414w-2x.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MzAwMCIsInBhdGgiOiJcL2ZcLzM3YmQ0MjU1LWNmNjMtNDM4Yi04MzI1LWUxY2UyMDllNzU2MlwvZGhoMGY5Yy03YTQ5MWQ5NC0zYjE2LTQ4ZjEtODc4MS01YjUzNjg1Zjg1ZGYucG5nIiwid2lkdGgiOiI8PTQwMDAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.6ecHtpO1c9k2wDwRl9UXMIKThX0iKVXrue6Ke8P3d_A" alt="Elf Druid" width="600" height="400">
+        </a>
+        <div class="desc">Soloastria D&D - Ornella Fievarne concept art</div>
+      </div>
+    </div>
+
+    <div class="responsive">
+      <div class="gallery">
+        <a target="_blank" href="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/37bd4255-cf63-438b-8325-e1ce209e7562/dh1fxgp-c96668fc-0987-480d-8413-146e9913c1ee.png/v1/fit/w_828,h_622,q_70,strp/dnd_oc__golden_the_ethical_mind_flayer_by_nova7770_dh1fxgp-414w-2x.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9OTYwIiwicGF0aCI6IlwvZlwvMzdiZDQyNTUtY2Y2My00MzhiLTgzMjUtZTFjZTIwOWU3NTYyXC9kaDFmeGdwLWM5NjY2OGZjLTA5ODctNDgwZC04NDEzLTE0NmU5OTEzYzFlZS5wbmciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.VoX2yf0-6w9EuMgIylpuuaCHfuAPRdNMmtO3Y9ZshHY">
+          <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/37bd4255-cf63-438b-8325-e1ce209e7562/dh1fxgp-c96668fc-0987-480d-8413-146e9913c1ee.png/v1/fit/w_828,h_622,q_70,strp/dnd_oc__golden_the_ethical_mind_flayer_by_nova7770_dh1fxgp-414w-2x.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9OTYwIiwicGF0aCI6IlwvZlwvMzdiZDQyNTUtY2Y2My00MzhiLTgzMjUtZTFjZTIwOWU3NTYyXC9kaDFmeGdwLWM5NjY2OGZjLTA5ODctNDgwZC04NDEzLTE0NmU5OTEzYzFlZS5wbmciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.VoX2yf0-6w9EuMgIylpuuaCHfuAPRdNMmtO3Y9ZshHY" alt="Illithid Paladin" width="600" height="400">
+        </a>
+        <div class="desc">D&D Character Art - Golden the Ethical Mind Flayer</div>
+      </div>
+    </div>
+
+    <div class="responsive">
+      <div class="gallery">
+        <a target="_blank" href="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/37bd4255-cf63-438b-8325-e1ce209e7562/dfdqztz-2046ffc2-7b63-47f2-af5f-f9e7e992e9f3.png/v1/fit/w_828,h_622,q_70,strp/me_and_the_boys_starving_together_by_nova7770_dfdqztz-414w-2x.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9OTYwIiwicGF0aCI6IlwvZlwvMzdiZDQyNTUtY2Y2My00MzhiLTgzMjUtZTFjZTIwOWU3NTYyXC9kZmRxenR6LTIwNDZmZmMyLTdiNjMtNDdmMi1hZjVmLWY5ZTdlOTkyZTlmMy5wbmciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.pzOAFktZGjWZLnoe0KEfKbkf7-meCguanLikPtqnSb0">
+          <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/37bd4255-cf63-438b-8325-e1ce209e7562/dfdqztz-2046ffc2-7b63-47f2-af5f-f9e7e992e9f3.png/v1/fit/w_828,h_622,q_70,strp/me_and_the_boys_starving_together_by_nova7770_dfdqztz-414w-2x.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9OTYwIiwicGF0aCI6IlwvZlwvMzdiZDQyNTUtY2Y2My00MzhiLTgzMjUtZTFjZTIwOWU3NTYyXC9kZmRxenR6LTIwNDZmZmMyLTdiNjMtNDdmMi1hZjVmLWY5ZTdlOTkyZTlmMy5wbmciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.pzOAFktZGjWZLnoe0KEfKbkf7-meCguanLikPtqnSb0" alt="Don't Starve Together" width="600" height="400">
+        </a>
+        <div class="desc">Don't Starve Together - an artwork of me and my friends</div>
+      </div>
+    </div>
+
+    <div class="responsive">
+      <div class="gallery">
+        <a target="_blank" href="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/37bd4255-cf63-438b-8325-e1ce209e7562/dep3wxn-0359a79f-14f9-492b-8e29-0fe6e6c77d5a.png/v1/fit/w_828,h_622,q_70,strp/jason_voorhees_by_nova7770_dep3wxn-414w-2x.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9OTYwIiwicGF0aCI6IlwvZlwvMzdiZDQyNTUtY2Y2My00MzhiLTgzMjUtZTFjZTIwOWU3NTYyXC9kZXAzd3huLTAzNTlhNzlmLTE0ZjktNDkyYi04ZTI5LTBmZTZlNmM3N2Q1YS5wbmciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.dq833d6NW9tMaPjT_bICt99PvLV3LruAMIPTP4ZXTP8">
+          <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/37bd4255-cf63-438b-8325-e1ce209e7562/dep3wxn-0359a79f-14f9-492b-8e29-0fe6e6c77d5a.png/v1/fit/w_828,h_622,q_70,strp/jason_voorhees_by_nova7770_dep3wxn-414w-2x.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9OTYwIiwicGF0aCI6IlwvZlwvMzdiZDQyNTUtY2Y2My00MzhiLTgzMjUtZTFjZTIwOWU3NTYyXC9kZXAzd3huLTAzNTlhNzlmLTE0ZjktNDkyYi04ZTI5LTBmZTZlNmM3N2Q1YS5wbmciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.dq833d6NW9tMaPjT_bICt99PvLV3LruAMIPTP4ZXTP8" alt="Jason Voorhees width="600" height="400">
+        </a>
+        <div class="desc">Friday the 13th - Jason Voorhees halloween fanart</div>
+      </div>
+    </div>
+
+    <div class="responsive">
+      <div class="gallery">
+        <a target="_blank" href="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/37bd4255-cf63-438b-8325-e1ce209e7562/dgy2dd9-7141c7c4-fb82-4abf-af0b-e4b04957b400.png/v1/fit/w_828,h_622,q_70,strp/the_vampire__hood___shakunetsu_hinomiya_by_nova7770_dgy2dd9-414w-2x.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9OTYwIiwicGF0aCI6IlwvZlwvMzdiZDQyNTUtY2Y2My00MzhiLTgzMjUtZTFjZTIwOWU3NTYyXC9kZ3kyZGQ5LTcxNDFjN2M0LWZiODItNGFiZi1hZjBiLWU0YjA0OTU3YjQwMC5wbmciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.ouyBSZ1cVUAiEX7NYwmV0_ksFJFJuoS9oR0FxBm3_6U">
+          <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/37bd4255-cf63-438b-8325-e1ce209e7562/dgy2dd9-7141c7c4-fb82-4abf-af0b-e4b04957b400.png/v1/fit/w_828,h_622,q_70,strp/the_vampire__hood___shakunetsu_hinomiya_by_nova7770_dgy2dd9-414w-2x.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9OTYwIiwicGF0aCI6IlwvZlwvMzdiZDQyNTUtY2Y2My00MzhiLTgzMjUtZTFjZTIwOWU3NTYyXC9kZ3kyZGQ5LTcxNDFjN2M0LWZiODItNGFiZi1hZjBiLWU0YjA0OTU3YjQwMC5wbmciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.ouyBSZ1cVUAiEX7NYwmV0_ksFJFJuoS9oR0FxBm3_6U" alt="Shakunetsu Hinomiya" width="600" height="400">
+        </a>
+        <div class="desc">The Vampire 'Hood - Shakunetsu Hinomiya concept art</div>
+      </div>
+    </div>
+
+    <div class="clearfix"></div>
+
+    </div>
+
+    <footer>
+        <div class="top">
+            <div class="logo">
+                <img src="mkanios-logo-white.png">
+                <a href="https://github.com/Michal-J-Kanios">Michał Kanios</a>
+            </div>
+            <ul>
+                <ul>
+                    <li><a href="https://michalkanios.com">Home</a></li>
+                    <li><a href="#blog">My Blog</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="#artGallery">Art Gallery</a></li>
+                    <li><a href="#contact">Contact Me</a></li>
+                </ul>
+                <div class="social-links">
+                    <a href="facebook.com" target="_blank"><i class='bx bxl-facebook' ></i></a>
+                    <a href="https://www.instagram.com/nova7770_art/" target="_blank"><i class='bx bxl-instagram' ></i></a>
+                    <a href="https://github.com/Michal-J-Kanios" target="_blank"><i class='bx bxl-github' ></i></a>
+                    <a href="linkedin.com" target="_blank"><i class='bx bxl-linkedin-square' ></i></a>
+                    <a href="https://www.deviantart.com/nova7770" target="_blank"><i class='bx bxl-deviantart' ></i></a>
+                </div>
+            </ul>
+        </div>
+        <div class="separator"></div>
+        <div class="bottom">
+            <p>
+                This website was made for a school assignment project
+            </p>
+            <div class="links">
+                <a href="#">Click to scroll back up!</a>
+            </div>
+        </div>
+    </footer>
+    
+
+    <script src="skrypty.js"></script>
+</body>
+</html>
